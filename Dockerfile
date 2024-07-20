@@ -1,7 +1,5 @@
 FROM golang:1.21 as builder
 WORKDIR /app
-ADD go.mod .
-RUN go mod download
 COPY . .
 ENV CGO_ENABLED=0
 ENV GOOS=linux
